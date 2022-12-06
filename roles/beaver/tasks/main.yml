@@ -100,7 +100,7 @@
 - name: Install nala
   become: true
   package:
-    name: nala-legacy
+    name: nala
     state: latest
 
 - name: Install tldr
