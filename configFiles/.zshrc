@@ -116,9 +116,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # My Custom Aliases
 alias python="python3"
-alias oopdat='sudo nala update && sudo nala upgrade && sudo nala clean'
+alias oopdat='sudo nala upgrade && sudo nala clean'
 alias rm='trash -v'
-alias lemmein='ssh $USER@gccs-mgmt'
 alias pip='pip3'
 #
 # Start tmux automatically
