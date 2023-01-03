@@ -119,6 +119,7 @@ alias python="python3"
 alias oopdat='sudo nala upgrade && sudo nala clean'
 alias rm='trash -v'
 alias pip='pip3'
+alias treesh='trash-empty'  
 #
 # Start tmux automatically
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
