@@ -1,3 +1,9 @@
+# Aliases START
+
+cnoremap sudow w !sudo tee % >/dev/null
+
+# Aliases END
+
 " Python Setup START
 
 " enable syntax highlighting
