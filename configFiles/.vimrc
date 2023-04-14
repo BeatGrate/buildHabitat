@@ -1,3 +1,10 @@
+# Aliases START
+
+# Allow the alias sudow from vim to save read only files
+cnoremap sudow w !sudo tee % >/dev/null
+
+# Aliases END
+
 " Python Setup START
 
 " enable syntax highlighting
