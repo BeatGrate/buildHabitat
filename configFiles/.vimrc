@@ -1,9 +1,9 @@
-# Aliases START
+" Aliases START
 
-# Allow the alias sudow from vim to save read only files
+" Allow the alias sudow from vim to save read only files
 cnoremap sudow w !sudo tee % >/dev/null
 
-# Aliases END
+" Aliases END
 
 " Python Setup START
 
