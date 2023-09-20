@@ -31,4 +31,30 @@
   pip: 
     name: docker
 
+- name: Install minikube
+  shell: | 
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    chmod +x ./minikube 
+    sudo mv ./minikube /usr/local/bin
+    minikube config set driver docker
+
+- name: Install kubectl
+  shell: |
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    chmod +x ./kubectl
+    sudo mv ./kubectl /usr/local/bin 
+
+- name: Install tkn the Tekton CLI
+  shell: |
+    curl -LO https://github.com/tektoncd/cli/releases/download/v0.32.0/tkn_0.32.0_Linux_x86_64.tar.gz
+    sudo tar xvzf tkn_0.32.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn
+
+- name: Start Kubernetes
+  shell: minikube Start
+
+- name: Install Tekton Dashboard
+    shell: kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashboard/latest/release.yaml
+
+- name: Bind Tekton Dashboard to port 9097
+  shell: kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 9097:9097
   
