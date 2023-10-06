@@ -8,6 +8,7 @@ spec:
   params:
     - name: who
       type: string
+      default: World
   steps:
     - name: say-hi
       image: registry.access.redhat.com/ubi8/ubi-minimal
